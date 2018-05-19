@@ -2,7 +2,7 @@ const express=require('express');
 const hbs=require('hbs');
 const fs=require('fs');
 
-const port=process.env.port || 3000;
+
 
 var app=express();
 
@@ -14,7 +14,7 @@ hbs.registerHelper('getYear',()=>{
   return new Date().getFullYear();
 })
 
-// 
+//
 // app.use((req,res,next)=>{
 //   res.render('maintenance.hbs',{
 //     pageTitle:"holahuu"
@@ -68,6 +68,7 @@ app.get('/bad',(req,res)=>{
 });
 
 
+const port=process.env.PORT || 3000;
 app.listen(port,()=>{
   console.log(`Server is up and running on port ${port}!!`);
 });
